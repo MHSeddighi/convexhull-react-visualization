@@ -47,8 +47,6 @@ a:hover {
 .btn--primary {
   background: #763F00;
   color: #fff;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
   padding: 12px 36px;
 }
 
@@ -104,6 +102,10 @@ body {
 .d-flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.gap-2 {
+  gap: 10px;
 }
 
 .justify-content-center {
@@ -262,13 +264,66 @@ body {
   overflow: hidden !important;
 }
 
+.w-50 {
+  width: 50%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.links {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1000;
+}
+
+.py-20 {
+  padding: 20px 0;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.links a svg:hover {
+  fill: #f1e5e5;
+
+}
+
 /* styles */
 
 /* media query */
 
 @media only screen and (max-width:850px) {
   .title {
-    font-size: 100px;
+    font-size: 90px;
+  }
+
+  .container__item>div {
+    height: 50% !important;
+    flex-shrink: 0;
+    flex-grow: 0;
+    overflow: auto;
+    max-height: 300px !important;
+  }
+}
+
+
+
+
+@media only screen and (max-width:1100px) {
+  .title {
+    font-size: 90px;
+  }
+
+  .container__item>div {
+    height: 50% !important;
+    flex-shrink: 0;
+    flex-grow: 0;
+    overflow: auto;
+    max-height: 300px !important;
   }
 }
 
@@ -278,4 +333,5 @@ body {
     min-height: 100%;
     max-width: none;
   }
+
 }
